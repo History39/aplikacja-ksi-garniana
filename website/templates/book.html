@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div><a href="{% url 'main' %}">BACK</a></div>
+<table>
+    <tr>
+        <th>Title</th>
+        <td>{{ book.main.title }}</td>
+    </tr>
+    <tr>
+        <th>Author</th>
+        <td>{{ book.main.author }}</td>
+    </tr>
+    <tr>
+        <th>Publisher</th>
+        <td>{{ book.detail.publisher }}</td>
+    </tr>
+    <tr>
+        <th>Publication date</th>
+        <td>{{ book.detail.publication_date }}</td>
+    </tr>
+    <tr>
+        <th>Cover</th>
+        <td>{{ book.detail.get_cover_display }}</td>
+    </tr>
+    <tr>
+        <th>Description</th>
+        <td>{{ book.detail.description }}</td>
+    </tr>
+    <tr>
+        <th>PRICE</th>
+        <td>${{ book.detail.price }}</td>
+    </tr>
+</table>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+</form>
+{% endblock content %}

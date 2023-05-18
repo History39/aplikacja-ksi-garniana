@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block content %}
+<form method="post">
+    {% csrf_token %}
+    {{ book_detail_form }}
+    {{ book_main_form }}
+    <input type="submit" value="Search">
+</form>
+<table>
+    <tr>
+        <th>Title</th>
+        <th>Author</th>
+        <th>Publisher</th>
+        <th>Cover</th>
+        <th>Publication Date</th>
+        <th>Description</th>
+        <th>Price</th>
+    </tr>
+    {% for book in books %}
+    <tr>
+        <td>{{ book.main.title }}</td>
+        <td>{{ book.main.author }}</td>
+        <td>{{ book.detail.publisher }}</td>
+        <td>{{ book.detail.get_cover_display }}</td>
+        <td>{{ book.detail.publication_date }}</td>
+        <td>{{ book.detail.description }}</td>
+        <td>{{ book.detail.price }}</td>
+        <td><a href="{% url 'book' book.id %}"> GO </a></td>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock content %}
