@@ -1,5 +1,8 @@
 from django.db import models
 from django.core.validators import MinValueValidator
+from django.contrib.auth.models import User
+from django.utils import timezone
+
 
 # Create your models here.
 
@@ -30,3 +33,4 @@ class Book(models.Model):
 
     def __str__(self):
         return f"{self.main.title} {self.main.author}"
+
