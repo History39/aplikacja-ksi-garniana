@@ -10,15 +10,12 @@
     </head>
 <body>
     <div class="website-header">
-        <h1>Świetny wybór!</h1>
+        <h1>Książka została zarezerwowana</h1>
     </div>
 </body>
 </html>
 
 <table>
-    <tr>
-        <a class="btn btn-outline-success" href="{% url 'main' %}"> BACK </a>
-    </tr>
     <tr>
         <th>Title</th>
         <td>{{ book.main.title }}</td>
@@ -50,7 +47,7 @@
 </table>
 <table>
     <tr>
-        <a class="btn btn-outline-success" href="{% url 'main' %}"> RESERVATION </a>
+        <a class="btn btn-outline-success" href="{% url 'main' %}"> BACK </a>
     </tr>
 </table>
 {% endblock content %}
