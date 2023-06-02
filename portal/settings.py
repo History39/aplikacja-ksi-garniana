@@ -42,7 +42,7 @@ INSTALLED_APPS = [
     'website',
     'book',
     'rest_framework',
-    'bootstrap5',
+    'django_bootstrap5',
 ]
 
 MIDDLEWARE = [
