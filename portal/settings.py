@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'website',
     'book',
     'rest_framework',
+    'bootstrap4',
     'django_bootstrap5',
 ]
 
